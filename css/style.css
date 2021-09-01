@@ -1,0 +1,97 @@
+.header-image {
+  background-image: url('../images/header_top_shadow.png');
+  background-position: top right;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 50vw;
+  height: 150vh;
+}
+
+.btn-oval {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+/* colors */
+.color-orange {
+  color: #F8A22F
+}
+.bg-color-orange {
+  background-color: #F8A22F
+}
+.color-gray-white {
+  color: #FEEFDA
+}
+
+/* animation underline */
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #F8A22F;
+}
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #F8A22F;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+}
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* hover color */
+.navbar .navbar-nav .nav-link span{
+  color: #dee2e6;
+}
+.navbar .navbar-nav .nav-link span.active{
+  color: white!important
+}
+
+/* mouse scroll animation */
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%
+}
+.icon-scroll {
+  width: 30px;
+  height: 50px;
+  margin-left: -20px;
+  bottom: 10px;
+  margin-top: -35px;
+  border: 2px solid #F8A22F;
+  border-radius: 25px
+}
+@media (max-width: 767px) {
+    .icon-scroll {
+        position: relative
+    }
+}
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #F8A22F;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+}
